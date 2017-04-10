@@ -1,0 +1,25 @@
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Lovestar Race Club</h2>
+                <hr class="light">
+                <div class="row row-centered strava-team">
+                    {% for item in site.strava %}
+                        <div class="col-lg-3 col-md-6 team-member col-centered">
+                            <a href="{{ item.strava_link }}">
+                                <img src="{{ item.profile_pic }}" class="chart">
+                                <h4>{{ item.first_name }}<br>{{ item.last_name }}</h4>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--
+'<div class="col-md-2 col-sm-4 team-member col-centered"><a href="' + item.strava_link + '"><img src="' + item.profile_pic + '" class="chart"><h4>' + item.first_name + '<br>' + item.last_name + '</h4></a></div>'
+-->
