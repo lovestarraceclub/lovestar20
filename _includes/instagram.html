@@ -10,14 +10,14 @@
     <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
             {% assign sorted = (site.instagram | sort: 'date') | reverse %}
-            {% for item in sorted limit:24 %}
+            {% for item in sorted limit:120 %}
             <div class="col-lg-4 col-sm-6">
-                <a href="{{ item.image_path }}" class="portfolio-box" title="{{ item.caption }} <small>{{ item.owner }}</small>">
-                    <img src="{{ item.thumbnail_path }}" class="img-responsive" alt="">
+                <a href="{{ item.fullsize_path }}" class="portfolio-box" title="{{ item.caption }} <small>{{ item.owner.username }}</small>">
+                    <img src="img/dummy.png" data-src="{{ item.thumbnail_path }}" class="img-responsive unveil" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                {{ item.owner }}
+                                {{ item.owner.username }}
                             </div>
                             <div class="project-name">
                                 {{ item.caption }}
@@ -29,4 +29,5 @@
             {% endfor %}
         </div>
     </div>
+
 </section>

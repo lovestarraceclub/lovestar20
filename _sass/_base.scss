@@ -155,7 +155,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/backgrounds/1332688933620034305.jpg');
     text-align: center;
     color: white;
     .header-content {
@@ -379,4 +379,9 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $theme-dark;
+}
+
+.unveil {
+  opacity: 0;
+  transition: opacity .1s ease-in;
 }

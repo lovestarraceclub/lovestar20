@@ -1,32 +1,15 @@
-<section class="no-padding" id="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Lovestar Instagram</h2>
-                <hr class="primary">
+<div class="col-lg-4 col-sm-6">
+    <a href="{{ item.fullsize_path }}" class="portfolio-box" title="{{ item.caption }} <small>{{ item.owner.username }}</small>">
+        <img src="{{ item.thumbnail_path }}" class="img-responsive" alt="">
+        <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                    {{ item.owner.username }}
+                </div>
+                <div class="project-name">
+                    {{ item.caption }}
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-            {% assign sorted = (site.instagram | sort: 'date') | reverse %}
-            {% for item in sorted %}
-            <div class="col-lg-4 col-sm-6">
-                <a href="{{ item.image_path }}" class="portfolio-box" title="{{ item.caption }} <small>{{ item.owner }}</small>">
-                    <img src="{{ item.thumbnail_path }}" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                {{ item.owner }}
-                            </div>
-                            <div class="project-name">
-                                {{ item.caption }}
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+    </a>
+</div>

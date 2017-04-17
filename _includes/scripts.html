@@ -9,6 +9,16 @@
 <script src="js/jquery.fittext.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.unveil.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+
+<!-- kick off unveil -->
+<script>
+    $("img.unveil").unveil(200, function() {
+        $(this).load(function() {
+            this.style.opacity = 1;
+        });
+    });
+</script>
